@@ -12,7 +12,7 @@ using Paynter.FacebookMessenger.Models.SendApi;
 using Paynter.FacebookMessenger.Configuration;
 using Paynter.FacebookMessenger.Models.Webhooks;
 
-namespace Paynter.FacebookMessenger.Helpers
+namespace Paynter.FacebookMessenger.Services
 {
     public delegate void MessageEventHandler(WebhookMessaging messageEvent);
     
