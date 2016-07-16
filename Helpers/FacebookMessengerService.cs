@@ -26,6 +26,7 @@ namespace Paynter.FacebookMessenger.Helpers
         public FacebookMessengerService(IOptions<FacebookOptions> options, ILogger<FacebookMessengerService> logger)
         {
             _options = options.Value;
+            _logger = logger;
             _apiUrl = $"{_options.ApiUrl}/v{_options.ApiVersion}/me";
         }
 
@@ -140,7 +141,8 @@ namespace Paynter.FacebookMessenger.Helpers
         {
             return JsonConvert.SerializeObject(data, new JsonSerializerSettings()
             {
-                ContractResolver = new CamelCasePropertyNamesContractResolver()
+                ContractResolver = new CamelCasePropertyNamesContractResolver(),
+                NullValueHandling = NullValueHandling.Ignore
             });
         }
     }
