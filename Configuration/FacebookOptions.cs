@@ -4,7 +4,6 @@ namespace Paynter.FacebookMessenger.Configuration
     {
         public string AccessToken { get; set; }
         public string ApiUrl { get; set; }
-        public string ApiVersion { get; set; }
         public string HubChallenge { get; set; }
     }
 }
