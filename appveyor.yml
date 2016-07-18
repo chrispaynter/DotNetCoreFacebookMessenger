@@ -1,8 +1,6 @@
 deploy:
   provider: NuGet
-  server:                  # remove to push to NuGet.org
   api_key:
     secure: wxabFa+sUDOAI2S5bbP/y5yjiQY2EpaBBEgCOqcdN3CidvCEo6K77X2ogVu34aDU
   skip_symbols: false
-  symbol_server:           # remove to push symbols to SymbolSource.org
   artifact: /.*\.nupkg/
