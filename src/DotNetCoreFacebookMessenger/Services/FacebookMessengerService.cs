@@ -63,7 +63,7 @@ namespace Paynter.FacebookMessenger.Services
                     {
                         if (messagingEvent.Message != null)
                         {
-                            if(MessageRecieved != null) MessageRecieved(messagingEvent);
+                            MessageRecieved?.Invoke(messagingEvent);
                         }
                         else
                         {
